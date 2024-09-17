@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function loginUser(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+
+            // Récupération des valeurs du formulaire
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Récupération des informations stockées
+            const storedUsername = localStorage.getItem('username');
+            const storedPassword = localStorage.getItem('password');
+
+            // Vérification des informations de connexion
+            if (username === storedUsername && password === storedPassword) {
+                // Redirection vers la page d'accueil
+                window.location.href = 'homepage.html';
+            } else {
+                alert('Nom d\'utilisateur ou mot de passe incorrect.');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Page de connexion</h1>
+    <form onsubmit="loginUser(event)">
+        <label for="username">Nom d'utilisateur:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">Se connecter</button>
+    </form>
+</body>
+</html>

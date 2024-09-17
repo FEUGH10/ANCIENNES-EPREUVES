@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        function registerUser(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+
+            // Récupération des valeurs du formulaire
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Stockage des informations dans le stockage local
+            localStorage.setItem('username', username);
+            localStorage.setItem('password', password);
+
+            // Redirection vers la page de connexion
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <h1>Page d'inscription</h1>
+    <form onsubmit="registerUser(event)">
+        <label for="username">Nom d'utilisateur:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <button type="submit">S'inscrire</button>
+    </form>
+</body>
+</html>

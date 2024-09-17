@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .subject {
+            display: inline-block;
+            margin: 20px;
+        }
+        .subject img {
+            width: 200px;
+            height: 100px;
+        }
+        .subject a {
+            text-decoration: none;
+            color: blue;
+            display: block;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Choisissez une matière</h1>
+    <div class="subject">
+        <a href="analyse reel.html">
+            <img src="analyse reel-logo.jfif" alt="analyse reel">
+            <span>Mathématiques</span>
+        </a>
+    </div>
+    <div class="subject">
+        <a href="java.html">
+            <img src="java-logo.png" alt="java">
+            <span>Sciences</span>
+        </a>
+    </div>
+    <div class="subject">
+        <a href="python.html">
+            <img src="python-logo.png" alt="python">
+            <span>Histoire</span>
+        </a>
+    </div>
+    <!-- Ajoutez d'autres matières ici -->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'fr,de,es,it,pt',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
